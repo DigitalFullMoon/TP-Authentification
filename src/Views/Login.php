@@ -7,7 +7,7 @@
                     <div class="row justify-content-between align-items-center mb-3">
                         <div class="col-6"></div>
                         <div class="col-6 text-end">
-                            <a href="register.php" class="btn btn-outline-primary">Créer un compte</a>
+                            <a href="Register.php" class="btn btn-outline-primary">Créer un compte</a>
                         </div>
                     </div>
                     <form action="login" method="post" id="loginForm">

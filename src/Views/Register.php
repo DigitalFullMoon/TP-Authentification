@@ -1,5 +1,5 @@
 <section id="register-container">
-    <h1 class="card-title text-center mb-4" id="title">Créer un compte</h1>
+    <h1 class="card-title text-center mb-4" id="title">Ajouter un Utilisateur</h1>
 
     <div class="row justify-content-center">
         <div class="col-12">
@@ -13,7 +13,7 @@
                                 <div class="mb-3 row">
                                     <label for="utilisateur" class="col-sm-4 col-form-label text-start">Utilisateur :</label>
                                     <div class="col-sm-8">
-                                        <input type="text" name="utilisateur" id="utilisateur" class="form-control" required>
+                                        <input type="text" name="utilisateur" id="utilisateur" class="form-control">
                                         <div class="invalid-feedback">Veuillez entrer un nom d'utilisateur.</div>
                                     </div>
                                 </div>
@@ -22,7 +22,7 @@
                                 <div class="mb-3 row">
                                     <label for="password" class="col-sm-4 col-form-label text-start">Mot de passe :</label>
                                     <div class="col-sm-8">
-                                        <input type="password" name="password" id="password" class="form-control" required>
+                                        <input type="password" name="password" id="password" class="form-control">
                                         <div class="invalid-feedback">Veuillez entrer un mot de passe.</div>
                                     </div>
                                 </div>
@@ -31,7 +31,7 @@
                                 <div class="mb-3 row">
                                     <label for="email" class="col-sm-4 col-form-label text-start">Email :</label>
                                     <div class="col-sm-8">
-                                        <input type="email" name="email" id="email" class="form-control" required>
+                                        <input type="email" name="email" id="email" class="form-control">
                                         <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
                                     </div>
                                 </div>
