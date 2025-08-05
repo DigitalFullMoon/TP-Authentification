@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code news</title>
-    <link rel="stylesheet" href="/css/common.css" type="text/css">
-    <link rel="stylesheet" href="/css/header.css" type="text/css">
-    <link rel="stylesheet" href="/css/footer.css" type="text/css">
+    <title>TP Connexion Sécurisée MVCS</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.bundle.js" defer></script>
+    <script src="js/script.js" defer></script>
     <?php 
     // ajout du CSS pour la vue à rendre
     if (isset($view_name)) { ?>
@@ -16,10 +17,8 @@
 </head>
 
 <body>
-    <?php require_once(__DIR__ . '/Header.php'); ?>
     <main>
         <!-- la variable $content utilisée ci-dessous est initialisé par la classe mère "Controller.php" -->
         <?= $content ?>
     </main>
-    <?php require_once(__DIR__ . '/Footer.php'); ?>
 </body>

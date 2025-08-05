@@ -1,0 +1,92 @@
+/* Centre tous les éléments h1 */
+h1 {
+    text-align: center;
+}
+
+/* Style de la liste ayant l'ID menu : suppression des puces, centrage du texte */
+#menu {
+    list-style: none;
+    text-align: center;
+}
+
+/* Style des éléments li dans #menu : affichage en ligne, padding, couleur de fond */
+#menu li {
+    display: inline;
+    padding: 20px;
+    background-color: steelblue;
+}
+
+/* Changement de couleur au survol des éléments li dans #menu */
+#menu li:hover {
+    background-color: rgb(120, 163, 163);
+}
+
+/* Style des liens dans #menu : couleur blanche, pas de soulignement */
+#menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Style du formulaire avec l’ID monform : largeur fixe, centrage horizontal */
+#monform {
+    width: 300px;
+    margin: auto;
+}
+
+/* Style des labels : largeur fixe */
+label {
+    width: 100px;
+}
+
+/* Style de l’élément avec l’ID monid : largeur, centrage, couleur, police, taille de police */
+#monid {
+    width: 100px;
+    margin: auto;
+    color: tomato;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+}
+
+/* Style du tableau avec la classe montableau : bordure noire, largeur fixe, centrage */
+.montableau {
+    border: 1px solid black;
+    width: 600px;
+    margin: auto;
+}
+
+/* Style des cellules d’entête th : fond orange transparent, bordure droite, texte blanc centré */
+th {
+    background-color: rgba(245, 175, 26, 0.993);
+    border-right: 1px solid rgb(29, 28, 28);
+    color: white;
+    text-align: center;
+}
+
+/* Style des cellules td : bordure haute et droite noires */
+td {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+/* Classe colid : centrage du texte */
+.colid {
+    text-align: center;
+}
+
+/* Classe colsuppr : centrage du texte */
+.colsuppr {
+    text-align: center;
+}
+
+/* id ajout changement bg*/
+#ajout {
+    background-color: rgb(219, 217, 217)!important;
+    text-decoration: none!important;
+}
+
+/*tous les liens*/
+
+a {
+    text-decoration: none !important;
+    font-weight: 500;
+}
