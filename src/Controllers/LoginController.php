@@ -46,4 +46,9 @@ class LoginController extends Controller
         // rendu de la page de login
         $this->render('Login', $data);
     }
+    public function register()
+    {
+        
+        $this->render('Register');
+    }
 }
