@@ -21,6 +21,7 @@ class LoginController extends Controller
             // authentification de l'utilisateur
             $email = $_POST['email'];
             $password = $_POST['password'];
+            $utilisateurName = $_POST['utilisateur'];
 
             // hachage du mot de passe 
             // $hashed_password = password_hash($password, PASSWORD_BCRYPT);
@@ -48,7 +49,12 @@ class LoginController extends Controller
     }
     public function register()
     {
-        
+        // vérification de la présence d'informations concernant la connexion (requête "post")
+        if (!empty($_POST))
+        {
+            //recupere les informations du formulaire
+            //
+        }
         $this->render('Register');
     }
 }

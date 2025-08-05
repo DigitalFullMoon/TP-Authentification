@@ -41,7 +41,7 @@
                                     <label for="fonction" class="col-sm-4 col-form-label text-start">Fonction :</label>
                                     <div class="col-sm-8">
                                         <input type="text" name="fonction" id="fonction" class="form-control">
-                                        <div class="invalid-feedback">Veuillez entrer une fonction.</div>
+                                        <div class="invalid-feedback">Veuillez saisir une fonction.</div>
                                     </div>
                                 </div>
 
@@ -59,7 +59,7 @@
                         <!-- Bouton "Retour à l'accueil" -->
                         <div class="row justify-content-end">
                             <div class="col-md-8 text-end">
-                                <a href="index.php" class="btn btn-outline-primary">Retour à l'accueil</a>
+                                <a href="/" class="btn btn-outline-primary">Retour à l'accueil</a>
                             </div>
                         </div>
                     </form>

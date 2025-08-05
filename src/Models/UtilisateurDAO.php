@@ -108,4 +108,13 @@ class UtilisateurDAO {
 
         return $utilisateur;
     }
+    public static function create(Utilisateur $utilisateur): Utilisateur {
+        
+        $pdo = Database::connect();
+        //ecrire la requête d'insertion
+        //faire la requête
+        //et voila
+        
+        return $utilisateur;
+    }
 }
