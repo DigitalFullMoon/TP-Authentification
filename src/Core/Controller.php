@@ -1,6 +1,6 @@
 <?php
 
-namespace Afpa\Core;
+namespace connexion\Core;
 
 /**
  * Classe controller mère qui sera à hériter pour mettre en place des controlleurs custom

@@ -1,8 +1,8 @@
 <?php
 
-namespace Afpa\Models;
+namespace connexion\Models;
 
-use Afpa\Tools\Database;
+use connexion\Tools\Database;
 
 use PDO;
 

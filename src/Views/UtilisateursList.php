@@ -1,6 +1,6 @@
 <?php
 
-use Afpa\Models\Utilisateur;
+use connexion\Models\Utilisateur;
 
 // définition du titre de la page
 $title = "Liste des utilisateurs";

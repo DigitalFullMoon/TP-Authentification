@@ -1,6 +1,6 @@
 <?php
 
-namespace Afpa\Tools;
+namespace connexion\Tools;
 
 use PDO;
 use PDOException;

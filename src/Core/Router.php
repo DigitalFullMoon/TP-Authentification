@@ -1,6 +1,6 @@
 <?php
 
-namespace Afpa\Core;
+namespace connexion\Core;
 
 /**
  * Classe gérant le routage du site.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Afpa\Models;
+namespace connexion\Models;
 
 class Utilisateur
 {

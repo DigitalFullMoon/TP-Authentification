@@ -1,9 +1,9 @@
 <?php
 
-namespace Afpa\Controllers;
+namespace connexion\Controllers;
 
-use Afpa\Core\Controller;
-use Afpa\Models\UtilisateurDAO;
+use connexion\Core\Controller;
+use connexion\Models\UtilisateurDAO;
 
 /**
  * Contrôleur qui gère l'authentification des utilisateurs.

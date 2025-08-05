@@ -1,8 +1,8 @@
 <?php
 
-namespace Afpa\Controllers;
+namespace connexion\Controllers;
 
-use Afpa\Core\Controller;
+use connexion\Core\Controller;
 
 /**
  * Exemple d'un contrôleur simple.
