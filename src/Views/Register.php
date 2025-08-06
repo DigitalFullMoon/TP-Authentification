@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="rounded-4">
-                <div class="card-body" id="register">
+                <div class="card-body" id="registerG">
                     <form action="register" method="post" id="registerForm">
                         <div class="row justify-content-center">
                             <div class="col-md-8">

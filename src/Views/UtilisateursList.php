@@ -6,13 +6,13 @@ use connexion\Models\Utilisateur;
 $title = "Liste des utilisateurs";
 ?>
 
-<h2>Utilisateurs</h2>
+<h1>Utilisateurs</h1>
 
 <?php foreach ($utilisateurs as $utilisateur) { ?>
 
     <div>
-        <h3><?= $utilisateur->getPrenom().' '.$utilisateur->getNom() ?></h3>
-        <p><?= $utilisateur->getEmail() ?></p>
+        <h3>Login : <?= $utilisateur->getEmail()?></h3>
+        <p>Email : <?= $utilisateur->getLogin() ?></p>
     </div>
 <?php
 } // fin du foreach 

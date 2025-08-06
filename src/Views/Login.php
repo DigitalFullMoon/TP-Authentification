@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="rounded-4">
-                <div class="card-body" id="login">
+                <div class="card-body" id="loginG">
                     <div class="row justify-content-between align-items-center mb-3">
                         <div class="col-6"></div>
                         <div class="col-6 text-end">
