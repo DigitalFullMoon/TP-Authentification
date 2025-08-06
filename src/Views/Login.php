@@ -1,4 +1,4 @@
-<section id="login-container">
+<section id="login-container" class="d-flex flex-column justify-content-center vh-100">
     <h1 class="card-title text-center mb-4" id="title">Connexion MVC</h1>
     <div class="row justify-content-center">
         <div class="col-12">

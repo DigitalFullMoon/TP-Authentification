@@ -146,4 +146,49 @@ class Utilisateur
 
         return $this;
     }
+    
+    /**
+     * Get the value of fonction
+     *
+     * @return string
+     */
+    public function getFonction(): string
+    {
+        return $this->fonction;
+    }
+    /**
+     * Set the value of fonction
+     *
+     * @param string $fonction
+     *
+     * @return self
+     */
+    public function setFonction(string $fonction): self
+    {
+        $this->fonction = $fonction;
+
+        return $this;
+    }
+    /**
+     * Retourne e Login login_user.
+        * @return string
+    */
+    public function getLogin(): string
+    {
+        return $this->login;
+    }
+    /**
+     * Set the value of login_user
+     *
+     * @param string $login
+     *
+     * @return self
+     */
+    public function setLogin(string $login): self
+    {
+        $this->login = $login;
+
+        return $this;
+    }
+    
 }

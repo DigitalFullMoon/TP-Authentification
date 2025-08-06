@@ -1,4 +1,4 @@
-<section id="register-container">
+<section id="register-container" class="d-flex flex-column justify-content-center vh-100">
     <h1 class="card-title text-center mb-4" id="title">Ajouter un Utilisateur</h1>
 
     <div class="row justify-content-center">
@@ -48,7 +48,7 @@
                                 <!-- Boutons -->
                                 <div class="row mb-3">
                                     <div class="offset-sm-4 col-sm-8">
-                                        <button type="submit" class="btn btn-success me-2">Enregistrer</button>
+                                        <button type="submit" class="btn btn-primary me-2">Enregistrer</button>
                                         <button type="reset" class="btn btn-outline-secondary">Annuler</button>
                                     </div>
                                 </div>
@@ -57,9 +57,9 @@
                         </div>
 
                         <!-- Bouton "Retour à l'accueil" -->
-                        <div class="row justify-content-end">
-                            <div class="col-md-8 text-end">
-                                <a href="/" class="btn btn-outline-primary">Retour à l'accueil</a>
+                        <div class="row justify-content-start">
+                            <div class="col-md-8 text-start">
+                                <a href="/" class="btn btn-outline-danger">Retour à l'accueil</a>
                             </div>
                         </div>
                     </form>

@@ -20,7 +20,7 @@ class UtilisateurDAO {
 
         // instanciation d'un tableau de stagaires
         $utilisateurs = array();
-        $sql = "SELECT * from utilisateur";
+        $sql = "SELECT * from utilisateurs";
 
         $results = $pdo->query($sql);
 
@@ -43,10 +43,10 @@ class UtilisateurDAO {
     public static function getById(int $id): Utilisateur {
         // récupération de l'objet de requêtage
         $pdo = Database::connect();
-        $statement = $pdo->prepare("SELECT * from utilisateur WHERE :id");
+        $statement = $pdo->prepare("SELECT * from utilisateurs WHERE :id_user");
 
         // association des paramètres sur la requête
-        $statement->bindParam("id", PDO::PARAM_INT);
+        $statement->bindParam("id_user", PDO::PARAM_INT);
         $statement->execute();
 
         // récupération du résultat
@@ -67,9 +67,9 @@ class UtilisateurDAO {
 
         $pdo = Database::connect();
 
-        $statement = $pdo->prepare("select * from utilisateur where email LIKE :email");
+        $statement = $pdo->prepare("select * from utilisateur where email LIKE :email_user");
 
-        $statement->bindParam("email", $email);
+        $statement->bindParam("email_user", $email);
 
         $statement->execute();
         // récupération de l'enregistrement de l'utliisateur
@@ -97,14 +97,14 @@ class UtilisateurDAO {
     private static function createUserFromRow(array $row_result): Utilisateur {
 
         // récupération du résultat à partir du tableau
-        $id = $row_result['id'];
-        $prenom = $row_result['prenom'];
-        $nom = $row_result['nom'];
-        $email = $row_result['email'];
-        $password = $row_result['password'];
+        $id = $row_result['id_user'];
+        $email = $row_result['email_user'];
+        $login = $row_result['login_user'];
+        $password = $row_result['pwd_user'];
+        $fonction = $row_result['fonction'];
 
         // instanciation de l'utilisateur
-        $utilisateur = new Utilisateur($id, $prenom, $nom, $email, $password);
+        $utilisateur = new Utilisateur($id, $email, $login, $password, $fonction);
 
         return $utilisateur;
     }
