@@ -18,10 +18,11 @@ class LoginController extends Controller
 
         // vérification de la présence d'informations concernant la connexion (requête "post")
         if (!empty($_POST)) {
+            error_log(print_r($_POST, true));
             // authentification de l'utilisateur
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $utilisateurName = $_POST['utilisateur'];
+            $login = $_POST['login'];
 
             // hachage du mot de passe 
             // $hashed_password = password_hash($password, PASSWORD_BCRYPT);
@@ -44,21 +45,29 @@ class LoginController extends Controller
         // rendu de la page de login
         $this->render('Login', $data);
     }
+
+    /**
+     * Méthode pour enregistrer un nouvel utilisateur.
+     */
     public function register()
     {
+        error_log(print_r($_POST, true));
+        // tableau associatif à passer à la vue
+        $data = [];
         // vérification de la présence d'informations concernant la connexion (requête "post")
         if (!empty($_POST)) {
+            error_log($_POST['email']);
             //recupere les informations du formulaire
-            $nom = $_POST['nom'];
+            $login = $_POST['login'];
             $email = $_POST['email'];
             $password = $_POST['password'];
             $fonction = $_POST['fonction'];                     
             // hachage du mot de passe
             $hashed_password = password_hash($password, PASSWORD_BCRYPT);
             // instanciation de l'utilisateur
-            $utilisateur = new Utilisateur('', $nom, $email, $hashed_password, $fonction);
+            $utilisateur = new Utilisateur('', $login, $email, $hashed_password, $fonction);
             // enregistrement de l'utilisateur dans la base de données
-            $utilisateur = UtilisateurDAO::create(new \connexion\Models\Utilisateur('', $nom, $email, $hashed_password, ''));
+            $utilisateur = UtilisateurDAO::create(new \connexion\Models\Utilisateur('', $login, $email, $hashed_password, ''));
             // si l'utilisateur a été créé, alors redirection vers la page de connexion
             $utilisateur_bdd = null;
 

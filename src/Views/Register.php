@@ -9,11 +9,11 @@
                         <div class="row justify-content-center">
                             <div class="col-md-8">
 
-                                <!-- Utilisateur -->
+                                <!-- Login -->
                                 <div class="mb-3 row">
-                                    <label for="utilisateur" class="col-sm-4 col-form-label text-start">Utilisateur :</label>
+                                    <label for="login" class="col-sm-4 col-form-label text-start">Utilisateur :</label>
                                     <div class="col-sm-8">
-                                        <input type="text" name="utilisateur" id="utilisateur" class="form-control">
+                                        <input type="text" name="login" id="login" class="form-control">
                                         <div class="invalid-feedback">Veuillez entrer un nom d'utilisateur.</div>
                                     </div>
                                 </div>

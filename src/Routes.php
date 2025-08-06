@@ -12,7 +12,7 @@ $router = new Router();
 
 // Définition de toutes les routes du site
 $router->addRoute('/', LoginController::class, 'login');
-$router->addRoute('/register', LoginController::class, 'register');
+$router->addRoute('/register', UtilisateurController::class, 'register');
     
 // page administrateur
 $router->addRoute('/utilisateurs/list', UtilisateurController::class, 'list');

@@ -10,14 +10,14 @@
                             <a href="register" class="btn btn-outline-danger">Créer un compte</a>
                         </div>
                     </div>
-                    <form action="login" method="post" id="loginForm">
+                    <form action="/" method="post" id="loginForm">
                         <div class="row justify-content-center">
                             <div class="col-md-8">
                                 <!-- Utilisateur -->
                                 <div class="mb-3 row">
-                                    <label for="utilisateur" class="col-sm-4 col-form-label text-start">Utilisateur :</label>
+                                    <label for="login" class="col-sm-4 col-form-label text-start">Utilisateur :</label>
                                     <div class="col-sm-8">
-                                        <input type="text" name="utilisateur" id="utilisateur" class="form-control">
+                                        <input type="text" name="login" id="login" class="form-control">
                                         <div class="invalid-feedback" id="utilisateurError">Veuillez entrer un nom d'utilisateur valide.</div>
                                     </div>
                                 </div>

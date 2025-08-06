@@ -3,7 +3,7 @@
         'name' => 'tp/authentification',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '97debe7214dcbdefe6cd168997e425307803e08c',
+        'reference' => '68cec56b2ae631957b602b38c27e1984c2183069',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -58,7 +58,7 @@
         'tp/authentification' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '97debe7214dcbdefe6cd168997e425307803e08c',
+            'reference' => '68cec56b2ae631957b602b38c27e1984c2183069',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
