@@ -4,19 +4,34 @@ namespace connexion\Models;
 
 class Utilisateur
 {
-    private string $id;
-    private string $prenom;
-    private string $nom;
+    // le '?' est important : il indique qu'il peut, pour un utilisateur, avoir un id null !
+    private ?int $id;
+    private string $login;
     private string $email;
     private string $password;
+    private string $fonction;
+    /**
+     * Constructeur d'un utilisateur.
+     * 
+     * IMPORTANT : nous avons "?int $id = null"
+     * Ceci indique que l'identifiant peut être "null" lors de la construction
+     * 
+     * ça permet de pouvoir instancier des utilisateurs SANS identifiant (par exemple, en cas de création dans une base de données).
+     *
+     * @param integer|null $id L'identifiant de l'utilisateur
+     * @param string $login Le login de l'utilisateur
+     * @param string $email L'adresse email de l'utilisateur
+     * @param string $password Le mot de passe de l'utilisateur
+     * @param string $fonction La fonction de l'utilisateur
+     */
 
-    public function __construct(string $id, string $prenom, string $nom, string $email, string $password)
+    public function __construct(string $login, string $email, string $password, string $fonction, ?int $id = null)
     {
-        $this->id = $id;
-        $this->prenom = $prenom;
-        $this->nom = $nom;
+        $this->login = $login;
         $this->email = $email;
+        $this->fonction = $fonction;
         $this->password = $password;
+        $this->id = $id;
     }
 
     /**
@@ -24,26 +39,14 @@ class Utilisateur
      */
     public function __toString()
     {
-        return "$this->id - $this->prenom $this->nom - $this->email";
+        return "$this->id - $this->login $this->email - $this->fonction";
     }
 
-    /**
-     * Get the value of id
-     *
-     * @return string
-     */
     public function getId(): string
     {
         return $this->id;
     }
 
-    /**
-     * Set the value of id
-     *
-     * @param string $id
-     *
-     * @return self
-     */
     public function setId(string $id): self
     {
         $this->id = $id;
@@ -51,71 +54,23 @@ class Utilisateur
         return $this;
     }
 
-    /**
-     * Get the value of prenom
-     *
-     * @return string
-     */
-    public function getPrenom(): string
+    public function getLogin(): string
     {
-        return $this->prenom;
+        return $this->login;
     }
 
-    /**
-     * Set the value of prenom
-     *
-     * @param string $prenom
-     *
-     * @return self
-     */
-    public function setPrenom(string $prenom): self
+    public function setLogin(string $login): self
     {
-        $this->prenom = $prenom;
+        $this->login = $login;
 
         return $this;
     }
 
-    /**
-     * Get the value of nom
-     *
-     * @return string
-     */
-    public function getNom(): string
-    {
-        return $this->nom;
-    }
-
-    /**
-     * Set the value of nom
-     *
-     * @param string $nom
-     *
-     * @return self
-     */
-    public function setNom(string $nom): self
-    {
-        $this->nom = $nom;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of email
-     *
-     * @return string
-     */
     public function getEmail(): string
     {
         return $this->email;
     }
 
-    /**
-     * Set the value of email
-     *
-     * @param string $email
-     *
-     * @return self
-     */
     public function setEmail(string $email): self
     {
         $this->email = $email;
@@ -123,72 +78,20 @@ class Utilisateur
         return $this;
     }
 
-    /**
-     * Get the value of password
-     *
-     * @return string
-     */
     public function getPassword(): string
     {
         return $this->password;
     }
 
-    /**
-     * Set the value of password
-     *
-     * @param string $password
-     *
-     * @return self
-     */
     public function setPassword(string $password): self
     {
         $this->password = $password;
 
         return $this;
     }
-    
-    /**
-     * Get the value of fonction
-     *
-     * @return string
-     */
+
     public function getFonction(): string
     {
         return $this->fonction;
     }
-    /**
-     * Set the value of fonction
-     *
-     * @param string $fonction
-     *
-     * @return self
-     */
-    public function setFonction(string $fonction): self
-    {
-        $this->fonction = $fonction;
-
-        return $this;
-    }
-    /**
-     * Retourne e Login login_user.
-        * @return string
-    */
-    public function getLogin(): string
-    {
-        return $this->login;
-    }
-    /**
-     * Set the value of login_user
-     *
-     * @param string $login
-     *
-     * @return self
-     */
-    public function setLogin(string $login): self
-    {
-        $this->login = $login;
-
-        return $this;
-    }
-    
 }

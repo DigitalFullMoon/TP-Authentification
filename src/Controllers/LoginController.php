@@ -3,6 +3,7 @@
 namespace connexion\Controllers;
 
 use connexion\Core\Controller;
+use connexion\Models\Utilisateur;
 use connexion\Models\UtilisateurDAO;
 
 /**
@@ -48,25 +49,34 @@ class LoginController extends Controller
         // vérification de la présence d'informations concernant la connexion (requête "post")
         if (!empty($_POST)) {
             //recupere les informations du formulaire
+            $nom = $_POST['nom'];
             $email = $_POST['email'];
             $password = $_POST['password'];
-            $utilisateurName = $_POST['utilisateur'];
+            $fonction = $_POST['fonction'];                     
             // hachage du mot de passe
             $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+            // instanciation de l'utilisateur
+            $utilisateur = new Utilisateur('', $nom, $email, $hashed_password, $fonction);
             // enregistrement de l'utilisateur dans la base de données
-            $utilisateur = UtilisateurDAO::create(new \connexion\Models\Utilisateur('', $utilisateurName, $email, $hashed_password, ''));
+            $utilisateur = UtilisateurDAO::create(new \connexion\Models\Utilisateur('', $nom, $email, $hashed_password, ''));
             // si l'utilisateur a été créé, alors redirection vers la page de connexion
-            if ($utilisateur != null) {
-                header("Location: /login");
-                die();
-            } else {
+            $utilisateur_bdd = null;
+
+            // cas de l'utilisateur null (problème lors de l'insertion)
+            if (is_null($utilisateur_bdd)) {
+                // échec de la création
                 // ajout d'un message d'erreur à fournir à la page de login
-                $error_message = "Erreur lors de la création du compte, veuillez réessayer.";
+                $error_message = "Erreur lors de la création de l'utilisateur.";
                 // ajout d'un duo clef->valeur à passer à la vue
                 $data['error_message'] = $error_message;
+                
+            } else { // cas de succès !
+                // redirection vers la page de login
+                header("Location: /");
+                die();
             }
-            //
+
         }
-        $this->render('Register');
+        $this->render('Register', $data);
     }
 }
